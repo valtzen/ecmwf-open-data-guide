@@ -1,0 +1,32 @@
+name: ecmwf-open-data-guide
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - jupyterlab
+  - ipywidgets
+  - numpy
+  - pandas
+  - xarray
+  - scipy
+  - matplotlib
+  - cartopy
+  - shapely
+  - pyproj
+  - eccodes
+  - requests
+  - beautifulsoup4
+  - metpy
+  - pint
+  - s3fs
+  - gcsfs
+  - cfgrib
+  - pip
+  - pip:
+      - ecmwf-opendata
+      - earthkit-data[cds]    # includes ecmwf-datastores-client for CDS access
+      - earthkit-plots
+      - cdsapi                # direct CDS API client (also available via earthkit wrapper)
+      - pystac-client
+      - planetary-computer
+      - jupyter-book
