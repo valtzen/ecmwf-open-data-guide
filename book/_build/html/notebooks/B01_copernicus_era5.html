@@ -1,0 +1,729 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Copernicus ERA5 Reanalysis via CDS &#8212; ECMWF Open Data — Interactive Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"24895910b55e4535944ea4924f60e0f4": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "daf95fcda19742cabf820483b88cf6dd": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "9b8b234496bd4eeab94f514fd343bb33": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_24895910b55e4535944ea4924f60e0f4", "max": 17981550.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_daf95fcda19742cabf820483b88cf6dd", "tabbable": null, "tooltip": null, "value": 17981550.0}}, "9e15d4ce50c84cc4af7d5f6df35bbcfd": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "400cc1387d8c4d1ba9556a282b2f9726": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "1a5d8ce64f354a1aa901780080274302": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_9e15d4ce50c84cc4af7d5f6df35bbcfd", "placeholder": "\u200b", "style": "IPY_MODEL_400cc1387d8c4d1ba9556a282b2f9726", "tabbable": null, "tooltip": null, "value": "cd109ca4257c810132533e26fda439d1.grib:\u2007\u200799%"}}, "fbf53de9d293432599d0d6b525ac8beb": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "42a20bd59a1646e490af79acf8023e02": {"model_name": "HTMLStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "533d9261467d4dca8a7e9278106f30c8": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_fbf53de9d293432599d0d6b525ac8beb", "placeholder": "\u200b", "style": "IPY_MODEL_42a20bd59a1646e490af79acf8023e02", "tabbable": null, "tooltip": null, "value": "\u200717.0M/17.1M\u2007[00:12&lt;00:00,\u20072.18MB/s]"}}, "4eea5050b94d49e9800d2cdb1962c93c": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": "hidden", "width": null}}, "3991f3df667e4aa88c1983c9f0b2ce79": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_1a5d8ce64f354a1aa901780080274302", "IPY_MODEL_9b8b234496bd4eeab94f514fd343bb33", "IPY_MODEL_533d9261467d4dca8a7e9278106f30c8"], "layout": "IPY_MODEL_4eea5050b94d49e9800d2cdb1962c93c", "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/B01_copernicus_era5';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Copernicus SEAS5 — Seasonal Forecast Anomalies" href="B02_copernicus_seasonal.html" />
+    <link rel="prev" title="ECMWF Open Data — Cloud Endpoints (AWS · Azure · GCS)" href="A03_cloud_endpoints.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://www.ecmwf.int/sites/default/files/ECMWF_logo.png" class="logo__image only-light" alt="ECMWF Open Data — Interactive Guide - Home"/>
+    <script>document.write(`<img src="https://www.ecmwf.int/sites/default/files/ECMWF_logo.png" class="logo__image only-dark" alt="ECMWF Open Data — Interactive Guide - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">A — ECMWF Open Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A01_open_data_catalog.html">ECMWF Open Data — Catalog &amp; Access Mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A02_open_data_earthkit.html">ECMWF Open Data — Retrieval &amp; Plotting with earthkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A03_cloud_endpoints.html">ECMWF Open Data — Cloud Endpoints (AWS · Azure · GCS)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">B — Copernicus Services</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Copernicus ERA5 Reanalysis via CDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B02_copernicus_seasonal.html">Copernicus SEAS5 — Seasonal Forecast Anomalies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B03_cams_dust.html">CAMS — Dust Aerosol over West Africa</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">C — SOFF (WMO NMHSs)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="C01_soff_wmo_access.html">SOFF — WMO NMHS Operational Data Access</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/B01_copernicus_era5.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Copernicus ERA5 Reanalysis via CDS</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-credentials">1) Setup &amp; credentials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-era5-2m-temperature-over-africa">2) Download ERA5 — 2m temperature over Africa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-and-inspect-with-earthkit-data">3) Open and inspect with earthkit.data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-2m-temperature-africa">4) Plot — 2m temperature, Africa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#era5-vs-real-time-open-data-when-to-use-which">5) ERA5 vs real-time Open Data — when to use which</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-home-messages">Take-home messages</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="copernicus-era5-reanalysis-via-cds">
+<h1>Copernicus ERA5 Reanalysis via CDS<a class="headerlink" href="#copernicus-era5-reanalysis-via-cds" title="Link to this heading">#</a></h1>
+<p><strong>Last updated:</strong> 2026-05-09</p>
+<hr class="docutils" />
+<section id="learning-objectives">
+<h2>Learning objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Set up <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> credentials and access the Copernicus Climate Data Store (CDS)</p></li>
+<li><p>Download ERA5 surface and pressure-level data for a custom region and time period</p></li>
+<li><p>Open GRIB data with <code class="docutils literal notranslate"><span class="pre">earthkit.data</span></code> — same workflow as ECMWF Open Data</p></li>
+<li><p>Compute a simple climatological baseline for Africa (2m temperature)</p></li>
+<li><p>Understand when to use ERA5 vs real-time Open Data</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p><strong>ERA5</strong> is ECMWF’s fifth-generation atmospheric reanalysis, covering <strong>1940 to present</strong> at 0.25°.<br />
+It is available free of charge via the <strong>Copernicus Climate Data Store (CDS)</strong>.</p>
+<p>ERA5 is the foundation for:</p>
+<ul class="simple">
+<li><p>Impact model training and validation (IbF, flood, drought)</p></li>
+<li><p>Climate baselines and anomaly detection</p></li>
+<li><p>Initialisation of regional/climate models</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Credentials:</strong> A free CDS account is required.<br />
+Register at <a class="reference external" href="https://cds.climate.copernicus.eu">cds.climate.copernicus.eu</a>, then set your personal token in <code class="docutils literal notranslate"><span class="pre">~/.cdsapirc</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cds</span><span class="o">.</span><span class="n">climate</span><span class="o">.</span><span class="n">copernicus</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span><span class="n">api</span>
+<span class="n">key</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">YOUR</span><span class="o">-</span><span class="n">PERSONAL</span><span class="o">-</span><span class="n">ACCESS</span><span class="o">-</span><span class="n">TOKEN</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Prerequisites:</strong> <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code>, <code class="docutils literal notranslate"><span class="pre">earthkit-data[cds]</span></code>, <code class="docutils literal notranslate"><span class="pre">earthkit-plots</span></code>, <code class="docutils literal notranslate"><span class="pre">xarray</span></code><br />
+<strong>Run time:</strong> ~10 minutes (downloads ~20 MB)<br />
+<strong>Data:</strong> ERA5 — 1 month, Africa bounding box</p>
+</section>
+<section id="setup-credentials">
+<h2>1) Setup &amp; credentials<a class="headerlink" href="#setup-credentials" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cdsapi</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">earthkit.data</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ekd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">earthkit.plots</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ekp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_data_dir</span>
+<span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">get_data_dir</span><span class="p">()</span>
+
+<span class="c1"># Test CDS connection</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CDS client ready&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data cache:&#39;</span><span class="p">,</span> <span class="n">DATA_DIR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CDS client ready
+Data cache: /Users/valtze/ecmwf-open-data-guide/book/data
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="download-era5-2m-temperature-over-africa">
+<h2>2) Download ERA5 — 2m temperature over Africa<a class="headerlink" href="#download-era5-2m-temperature-over-africa" title="Link to this heading">#</a></h2>
+<p>We download one month of daily-mean 2m temperature for sub-Saharan Africa.<br />
+This is the kind of data used for <strong>heatwave early warning</strong> climatologies.</p>
+<p>Two access patterns shown:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> directly</strong> — the traditional approach</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">earthkit.data</span></code> wrapper</strong> — consistent with other notebooks in this series</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Option A: cdsapi directly</span>
+<span class="n">era5_path</span> <span class="o">=</span> <span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">&#39;era5_africa_2t_2024_jan.grib&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">era5_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+        <span class="s1">&#39;reanalysis-era5-single-levels&#39;</span><span class="p">,</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;product_type&#39;</span><span class="p">:</span> <span class="s1">&#39;reanalysis&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;2m_temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;total_precipitation&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_sea_level_pressure&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="s1">&#39;2024&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;month&#39;</span><span class="p">:</span> <span class="s1">&#39;01&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;day&#39;</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">d</span><span class="si">:</span><span class="s1">02d</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">32</span><span class="p">)],</span>
+            <span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="s1">&#39;12:00&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;area&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">40</span><span class="p">,</span> <span class="mi">55</span><span class="p">],</span>  <span class="c1"># N, W, S, E — sub-Saharan Africa</span>
+            <span class="s1">&#39;data_format&#39;</span><span class="p">:</span> <span class="s1">&#39;grib&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="nb">str</span><span class="p">(</span><span class="n">era5_path</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Downloaded:&#39;</span><span class="p">,</span> <span class="n">era5_path</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Using cached file:&#39;</span><span class="p">,</span> <span class="n">era5_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "3991f3df667e4aa88c1983c9f0b2ce79"}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: /Users/valtze/ecmwf-open-data-guide/book/data/era5_africa_2t_2024_jan.grib
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Option B: earthkit.data wrapper (same result, consistent API)</span>
+<span class="c1"># Uncomment to use instead of Option A above</span>
+<span class="c1"># ds_era5 = ekd.from_source(</span>
+<span class="c1">#     &#39;cds&#39;,</span>
+<span class="c1">#     &#39;reanalysis-era5-single-levels&#39;,</span>
+<span class="c1">#     {</span>
+<span class="c1">#         &#39;product_type&#39;: &#39;reanalysis&#39;,</span>
+<span class="c1">#         &#39;variable&#39;: &#39;2m_temperature&#39;,</span>
+<span class="c1">#         &#39;year&#39;: &#39;2024&#39;, &#39;month&#39;: &#39;01&#39;, &#39;day&#39;: &#39;15&#39;, &#39;time&#39;: &#39;12:00&#39;,</span>
+<span class="c1">#         &#39;area&#39;: [40, -20, -40, 55],</span>
+<span class="c1">#         &#39;data_format&#39;: &#39;grib&#39;,</span>
+<span class="c1">#     }</span>
+<span class="c1"># )</span>
+<span class="c1"># print(ds_era5.ls())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="open-and-inspect-with-earthkit-data">
+<h2>3) Open and inspect with earthkit.data<a class="headerlink" href="#open-and-inspect-with-earthkit-data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">ekd</span><span class="o">.</span><span class="n">from_source</span><span class="p">(</span><span class="s1">&#39;file&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">era5_path</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">ls</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   centre shortName typeOfLevel  level  dataDate  dataTime stepRange dataType  \
+0    ecmf        2t     surface      0  20240101      1200         0       an   
+1    ecmf        tp     surface      0  20240101       600       5-6       fc   
+2    ecmf       msl     surface      0  20240101      1200         0       an   
+3    ecmf        2t     surface      0  20240102      1200         0       an   
+4    ecmf        tp     surface      0  20240102       600       5-6       fc   
+..    ...       ...         ...    ...       ...       ...       ...      ...   
+88   ecmf        tp     surface      0  20240130       600       5-6       fc   
+89   ecmf       msl     surface      0  20240130      1200         0       an   
+90   ecmf        2t     surface      0  20240131      1200         0       an   
+91   ecmf        tp     surface      0  20240131       600       5-6       fc   
+92   ecmf       msl     surface      0  20240131      1200         0       an   
+
+    number    gridType  
+0        0  regular_ll  
+1        0  regular_ll  
+2        0  regular_ll  
+3        0  regular_ll  
+4        0  regular_ll  
+..     ...         ...  
+88       0  regular_ll  
+89       0  regular_ll  
+90       0  regular_ll  
+91       0  regular_ll  
+92       0  regular_ll  
+
+[93 rows x 10 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-2m-temperature-africa">
+<h2>4) Plot — 2m temperature, Africa<a class="headerlink" href="#plot-2m-temperature-africa" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select a single 2t field and plot with earthkit.plots</span>
+<span class="n">t2m_fields</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">shortName</span><span class="o">=</span><span class="s1">&#39;2t&#39;</span><span class="p">)</span>
+<span class="n">t2m_first</span> <span class="o">=</span> <span class="n">t2m_fields</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">ekp</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<span class="n">m</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t2m_first</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ERA5 2m Temperature — Africa (Jan 2024)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/valtze/miniforge3/envs/ecmwf-open-data-guide/lib/python3.10/site-packages/earthkit/plots/components/subplots.py:678: UserWarning: `plot` is deprecated. Use `quickplot` instead.
+  warnings.warn(&quot;`plot` is deprecated. Use `quickplot` instead.&quot;)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;ERA5 2m Temperature — Africa (Jan 2024)&#39;)
+</pre></div>
+</div>
+<img alt="../_images/b758020ddd002798bb91e4b6c99495913f62c86f7c8b1eec16d18cc24951a05b.png" src="../_images/b758020ddd002798bb91e4b6c99495913f62c86f7c8b1eec16d18cc24951a05b.png" />
+</div>
+</div>
+</section>
+<section id="era5-vs-real-time-open-data-when-to-use-which">
+<h2>5) ERA5 vs real-time Open Data — when to use which<a class="headerlink" href="#era5-vs-real-time-open-data-when-to-use-which" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>ERA5</p></th>
+<th class="head"><p>ECMWF Open Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Time coverage</p></td>
+<td><p>1940–present</p></td>
+<td><p>Last ~4 days</p></td>
+</tr>
+<tr class="row-odd"><td><p>Latency</p></td>
+<td><p>~5 days lag</p></td>
+<td><p>~1–6 hours</p></td>
+</tr>
+<tr class="row-even"><td><p>Grid</p></td>
+<td><p>0.25°</p></td>
+<td><p>0.25° (9km later 2026)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Credentials</p></td>
+<td><p>CDS free account</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p>Use case</p></td>
+<td><p>Climatology, model training</p></td>
+<td><p>Operational forecasting</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For <strong>IbF model training</strong>: ERA5 provides the historical climate baseline.<br />
+For <strong>operational triggers</strong>: use ECMWF Open Data or SOFF forecasts.</p>
+</section>
+<section id="take-home-messages">
+<h2>Take-home messages<a class="headerlink" href="#take-home-messages" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>ERA5 is free via CDS — <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> or <code class="docutils literal notranslate"><span class="pre">earthkit.data</span></code> wrapper, same data</p></li>
+<li><p>The earthkit API is consistent: <code class="docutils literal notranslate"><span class="pre">ekd.from_source('cds',</span> <span class="pre">...)</span></code> reads CDS data just like <code class="docutils literal notranslate"><span class="pre">ekd.from_source('file',</span> <span class="pre">...)</span></code></p></li>
+<li><p>Africa bounding box: <code class="docutils literal notranslate"><span class="pre">area=[40,</span> <span class="pre">-20,</span> <span class="pre">-40,</span> <span class="pre">55]</span></code> (N, W, S, E)</p></li>
+<li><p>Next: <strong>B02</strong> for seasonal forecasts, <strong>B03</strong> for CAMS dust</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="A03_cloud_endpoints.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ECMWF Open Data — Cloud Endpoints (AWS · Azure · GCS)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="B02_copernicus_seasonal.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Copernicus SEAS5 — Seasonal Forecast Anomalies</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-credentials">1) Setup &amp; credentials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-era5-2m-temperature-over-africa">2) Download ERA5 — 2m temperature over Africa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-and-inspect-with-earthkit-data">3) Open and inspect with earthkit.data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-2m-temperature-africa">4) Plot — 2m temperature, Africa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#era5-vs-real-time-open-data-when-to-use-which">5) ERA5 vs real-time Open Data — when to use which</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-home-messages">Take-home messages</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Valters Žeižis (ECMWF)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1507 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ECMWF Open Data — Catalog &amp; Access Mechanisms &#8212; ECMWF Open Data — Interactive Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/A01_open_data_catalog';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ECMWF Open Data — Retrieval &amp; Plotting with earthkit" href="A02_open_data_earthkit.html" />
+    <link rel="prev" title="ECMWF Open Data — Interactive Guide" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://www.ecmwf.int/sites/default/files/ECMWF_logo.png" class="logo__image only-light" alt="ECMWF Open Data — Interactive Guide - Home"/>
+    <script>document.write(`<img src="https://www.ecmwf.int/sites/default/files/ECMWF_logo.png" class="logo__image only-dark" alt="ECMWF Open Data — Interactive Guide - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">A — ECMWF Open Data</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">ECMWF Open Data — Catalog &amp; Access Mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A02_open_data_earthkit.html">ECMWF Open Data — Retrieval &amp; Plotting with earthkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A03_cloud_endpoints.html">ECMWF Open Data — Cloud Endpoints (AWS · Azure · GCS)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">B — Copernicus Services</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="B01_copernicus_era5.html">Copernicus ERA5 Reanalysis via CDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B02_copernicus_seasonal.html">Copernicus SEAS5 — Seasonal Forecast Anomalies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B03_cams_dust.html">CAMS — Dust Aerosol over West Africa</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">C — SOFF (WMO NMHSs)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="C01_soff_wmo_access.html">SOFF — WMO NMHS Operational Data Access</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/A01_open_data_catalog.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ECMWF Open Data — Catalog & Access Mechanisms</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-in-the-catalogue-as-of-ifs-cycle-50r1-may-2026">What’s in the catalogue (as of IFS Cycle 50r1, May 2026)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-coming">What’s coming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#licence">Licence</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecmwf-open-data-quick-facts-naming-50r1">ECMWF Open Data — quick facts &amp; naming (50r1)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-naming-since-ifs-cycle-50r1-12-may-2026">Key naming since IFS Cycle 50r1 (12 May 2026)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-endpoints">Access endpoints</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-imports">1) Setup &amp; imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#browse-the-live-index">2) Browse the live index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preflight-download-pin-a-safe-run-and-cache-what-well-use">3. Preflight &amp; download — pin a safe run and cache what we’ll use</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore">4) Explore</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-by-shortname">5) Plot by <code class="docutils literal notranslate"><span class="pre">shortName</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-cli-python-downloads">Appendix · CLI &amp; Python downloads</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-fullfile-download">1) Direct full‑file download</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-requests-resumable">2) Python <code class="docutils literal notranslate"><span class="pre">requests</span></code> (resumable)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#singleparameter-download-http-range">3) Single‑parameter download (HTTP <strong>Range</strong>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecmwf-opendata-client-simplest-fetch">4) <code class="docutils literal notranslate"><span class="pre">ecmwf-opendata</span></code> client — simplest fetch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#earthkit-direct-fetch-no-file-needed">5) earthkit direct fetch — no file needed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-home-messages">Take-home messages</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next steps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#support-feedback">Support &amp; feedback</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ecmwf-open-data-catalog-access-mechanisms">
+<h1>ECMWF Open Data — Catalog &amp; Access Mechanisms<a class="headerlink" href="#ecmwf-open-data-catalog-access-mechanisms" title="Link to this heading">#</a></h1>
+<p><strong>Last updated:</strong> 2026-05-09</p>
+<hr class="docutils" />
+<section id="learning-objectives">
+<h2>Learning objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
+<p>By the end of this notebook you will be able to:</p>
+<ol class="arabic simple">
+<li><p>Describe what is in the ECMWF Free &amp; Open Data catalogue and how it is organised</p></li>
+<li><p>Understand the <strong>IFS 50r1</strong> naming changes (former HRES is now ENS control)</p></li>
+<li><p>Browse the live index at <code class="docutils literal notranslate"><span class="pre">data.ecmwf.int</span></code> to discover available runs and steps</p></li>
+<li><p>Download a GRIB2 file using three methods: <code class="docutils literal notranslate"><span class="pre">ecmwf-opendata</span></code> client, <code class="docutils literal notranslate"><span class="pre">curl</span></code>/<code class="docutils literal notranslate"><span class="pre">wget</span></code>, and HTTP Range</p></li>
+<li><p>Inspect file contents with <strong>earthkit.data</strong> and plot a field by <code class="docutils literal notranslate"><span class="pre">shortName</span></code></p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>ECMWF’s <strong>Free and Open Data</strong> is a curated subset of operational forecasts published under <strong>CC BY 4.0</strong> — no credentials required.<br />
+It is available at <code class="docutils literal notranslate"><span class="pre">data.ecmwf.int</span></code> (FTP/HTTPS) and mirrored on AWS S3, Azure, and Google Cloud.</p>
+<section id="what-s-in-the-catalogue-as-of-ifs-cycle-50r1-may-2026">
+<h3>What’s in the catalogue (as of IFS Cycle 50r1, May 2026)<a class="headerlink" href="#what-s-in-the-catalogue-as-of-ifs-cycle-50r1-may-2026" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Product</p></th>
+<th class="head"><p>Stream / Type</p></th>
+<th class="head"><p>Grid</p></th>
+<th class="head"><p>Freq</p></th>
+<th class="head"><p>Steps</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IFS ENS control (<code class="docutils literal notranslate"><span class="pre">enfo/cf</span></code>)</p></td>
+<td><p>replaces former HRES</p></td>
+<td><p>0.25°</p></td>
+<td><p>4×/day</p></td>
+<td><p>0–360 h</p></td>
+</tr>
+<tr class="row-odd"><td><p>IFS ENS perturbed (<code class="docutils literal notranslate"><span class="pre">enfo/pf</span></code>)</p></td>
+<td><p>50 members</p></td>
+<td><p>0.25°</p></td>
+<td><p>2×/day</p></td>
+<td><p>0–360 h</p></td>
+</tr>
+<tr class="row-even"><td><p>AIFS-ENS v2 (<code class="docutils literal notranslate"><span class="pre">enfo/cf+pf</span></code>)</p></td>
+<td><p>AI model</p></td>
+<td><p>0.25°</p></td>
+<td><p>4×/day</p></td>
+<td><p>0–360 h</p></td>
+</tr>
+<tr class="row-odd"><td><p>IFS Waves deterministic (<code class="docutils literal notranslate"><span class="pre">wave</span></code>)</p></td>
+<td><p>—</p></td>
+<td><p>0.25°</p></td>
+<td><p>4×/day</p></td>
+<td><p>0–360 h</p></td>
+</tr>
+<tr class="row-even"><td><p>IFS Waves ensemble (<code class="docutils literal notranslate"><span class="pre">waef</span></code>)</p></td>
+<td><p>—</p></td>
+<td><p>0.25°</p></td>
+<td><p>2×/day</p></td>
+<td><p>0–360 h</p></td>
+</tr>
+<tr class="row-odd"><td><p>TC tracks</p></td>
+<td><p>BUFR</p></td>
+<td><p>—</p></td>
+<td><p>4×/day</p></td>
+<td><p>real-time</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<div><p><strong>50r1 naming change (12 May 2026):</strong> The former deterministic HRES run no longer exists as a separate product.<br />
+The <strong>IFS ENS control forecast</strong> (<code class="docutils literal notranslate"><span class="pre">stream=&quot;enfo&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">type=&quot;cf&quot;</span></code>) is the direct replacement for most use cases.</p>
+</div></blockquote>
+</section>
+<section id="what-s-coming">
+<h3>What’s coming<a class="headerlink" href="#what-s-coming" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Native 9 km resolution</strong> in the free open subset — later in 2026 (currently 0.25°)</p></li>
+<li><p><strong>Full GRIB2</strong> output (IFS 50r2, Q3 2026) — resolves the current GRIB1/GRIB2 mix</p></li>
+</ul>
+</section>
+<section id="licence">
+<h3>Licence<a class="headerlink" href="#licence" title="Link to this heading">#</a></h3>
+<p>All open data is published under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 (CC BY 4.0)</a>.<br />
+Attribution required: <em>“Generated using Copernicus Climate Change Service information YYYY”</em> or <em>“ECMWF”</em>.</p>
+<hr class="docutils" />
+<p><strong>Prerequisites:</strong> Python 3.10+, <code class="docutils literal notranslate"><span class="pre">ecmwf-opendata</span></code>, <code class="docutils literal notranslate"><span class="pre">earthkit-data</span></code>, <code class="docutils literal notranslate"><span class="pre">earthkit-plots</span></code>, <code class="docutils literal notranslate"><span class="pre">requests</span></code><br />
+<strong>Run time:</strong> ~5 minutes (downloads ~5 MB)<br />
+<strong>Data:</strong> live from <code class="docutils literal notranslate"><span class="pre">data.ecmwf.int</span></code> — no credentials needed</p>
+</section>
+</section>
+<section id="ecmwf-open-data-quick-facts-naming-50r1">
+<h2>ECMWF Open Data — quick facts &amp; naming (50r1)<a class="headerlink" href="#ecmwf-open-data-quick-facts-naming-50r1" title="Link to this heading">#</a></h2>
+<p>ECMWF Open Data uses a <strong>0.25° global grid</strong> in <strong>GRIB2</strong>. Data is regridded from native model resolution.</p>
+<section id="key-naming-since-ifs-cycle-50r1-12-may-2026">
+<h3>Key naming since IFS Cycle 50r1 (12 May 2026)<a class="headerlink" href="#key-naming-since-ifs-cycle-50r1-12-may-2026" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">ifs-ens</span></code> control</strong> (<code class="docutils literal notranslate"><span class="pre">stream=&quot;enfo&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">type=&quot;cf&quot;</span></code>) — replaces former HRES deterministic.<br />
+This is what most users previously called “HRES”. If you have existing code using <code class="docutils literal notranslate"><span class="pre">stream=&quot;oper&quot;,</span> <span class="pre">type=&quot;fc&quot;</span></code>, update to <code class="docutils literal notranslate"><span class="pre">stream=&quot;enfo&quot;,</span> <span class="pre">type=&quot;cf&quot;</span></code>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">ifs-ens</span></code> perturbed</strong> (<code class="docutils literal notranslate"><span class="pre">stream=&quot;enfo&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">type=&quot;pf&quot;</span></code>) — 50 perturbed members.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">aifs-single</span></code></strong> — ECMWF AI model, <code class="docutils literal notranslate"><span class="pre">stream=&quot;oper&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">type=&quot;fc&quot;</span></code>. Available 4×/day.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">aifs-ens</span></code></strong> — AI ensemble, <code class="docutils literal notranslate"><span class="pre">stream=&quot;enfo&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">type=&quot;cf&quot;</span></code>/<code class="docutils literal notranslate"><span class="pre">&quot;pf&quot;</span></code>.</p></li>
+<li><p><strong>Waves deterministic</strong> — <code class="docutils literal notranslate"><span class="pre">stream=&quot;wave&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">type=&quot;fc&quot;</span></code>.</p></li>
+<li><p><strong>Waves ensemble</strong> — <code class="docutils literal notranslate"><span class="pre">stream=&quot;waef&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">type=&quot;cf&quot;</span></code>/<code class="docutils literal notranslate"><span class="pre">&quot;pf&quot;</span></code>.</p></li>
+</ul>
+</section>
+<section id="access-endpoints">
+<h3>Access endpoints<a class="headerlink" href="#access-endpoints" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>URL / command</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Python client</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ecmwf-opendata</span></code></p></td>
+<td><p>Recommended</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTP/HTTPS</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">data.ecmwf.int/forecasts/</span></code></p></td>
+<td><p>Browse live index</p></td>
+</tr>
+<tr class="row-even"><td><p>AWS S3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">s3://ecmwf-forecasts/</span></code> (public)</p></td>
+<td><p>No credentials</p></td>
+</tr>
+<tr class="row-odd"><td><p>Azure STAC</p></td>
+<td><p>Planetary Computer</p></td>
+<td><p>See Notebook A03</p></td>
+</tr>
+<tr class="row-even"><td><p>Google Cloud</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gs://ecmwf-open-data</span></code> (public)</p></td>
+<td><p>See Notebook A03</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="setup-imports">
+<h2>1) Setup &amp; imports<a class="headerlink" href="#setup-imports" title="Link to this heading">#</a></h2>
+<p>We start out by importing the required libraries and support functions in _utils. We also setup a <strong>single cache</strong> so every notebook stores data under <code class="docutils literal notranslate"><span class="pre">data/</span></code> at the repo root.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Standard libs</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">timezone</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span><span class="o">,</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="c1"># Earthkit</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">earthkit.data</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ekd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">earthkit.plots</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ekp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">earthkit.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">from_source</span>
+
+<span class="c1"># Project helpers</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_data_dir</span><span class="p">,</span> <span class="n">quick_plot</span>
+
+<span class="c1"># One cache to rule them all</span>
+<span class="n">DATA_DIR</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">get_data_dir</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data cache:&quot;</span><span class="p">,</span> <span class="n">DATA_DIR</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;earthkit-data:&quot;</span><span class="p">,</span> <span class="n">ekd</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;earthkit-plots:&quot;</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">ekp</span><span class="p">,</span> <span class="s2">&quot;__version__&quot;</span><span class="p">,</span> <span class="s2">&quot;unknown&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data cache: /Users/valtze/ecmwf-open-data-guide/book/data
+earthkit-data: 0.19.4
+earthkit-plots: 0.6.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">timezone</span>
+
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+
+<span class="k">if</span>   <span class="n">now</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">22</span><span class="p">:</span>  <span class="n">run_date</span> <span class="o">=</span> <span class="n">now</span><span class="p">;</span>                     <span class="n">run_hour</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># today&#39;s 12z should be fully online</span>
+<span class="k">elif</span> <span class="n">now</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>  <span class="n">run_date</span> <span class="o">=</span> <span class="n">now</span><span class="p">;</span>                     <span class="n">run_hour</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c1"># today&#39;s 00z</span>
+<span class="k">else</span><span class="p">:</span>                 <span class="n">run_date</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span> <span class="n">run_hour</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># yesterday 12z</span>
+
+<span class="n">fc_date</span> <span class="o">=</span> <span class="n">run_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>   <span class="c1"># e.g. &quot;20250903&quot;</span>
+<span class="n">fc_time</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">run_hour</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">&quot;</span>             <span class="c1"># &quot;00&quot; or &quot;12&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Using model run: </span><span class="si">{</span><span class="n">fc_date</span><span class="si">}</span><span class="s2"> at </span><span class="si">{</span><span class="n">fc_time</span><span class="si">}</span><span class="s2">z&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using model run: 20260511 at 00z
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="browse-the-live-index">
+<h2>2) Browse the live index<a class="headerlink" href="#browse-the-live-index" title="Link to this heading">#</a></h2>
+<p>Here we mirror the public layout and discover available <strong>steps</strong> for following selection. We basically map out the data available in the FTP resource.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BASE</span> <span class="o">=</span> <span class="s2">&quot;https://data.ecmwf.int/forecasts&quot;</span>
+
+<span class="n">RUNS_UTC</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;00&quot;</span><span class="p">,</span> <span class="s2">&quot;06&quot;</span><span class="p">,</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span> <span class="s2">&quot;18&quot;</span><span class="p">]</span>
+
+<span class="n">MODEL_MAP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;ifs-single&quot;</span><span class="p">:</span>  <span class="p">{</span><span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ifs&quot;</span><span class="p">,</span> <span class="s2">&quot;0p25&quot;</span><span class="p">,</span> <span class="s2">&quot;oper&quot;</span><span class="p">],</span>         <span class="s2">&quot;suffixes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;oper-fc&quot;</span><span class="p">]},</span>
+    <span class="s2">&quot;ifs-ens&quot;</span><span class="p">:</span>     <span class="p">{</span><span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ifs&quot;</span><span class="p">,</span> <span class="s2">&quot;0p25&quot;</span><span class="p">,</span> <span class="s2">&quot;enfo&quot;</span><span class="p">],</span>         <span class="s2">&quot;suffixes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;enfo-ef&quot;</span><span class="p">,</span> <span class="s2">&quot;enfo-em&quot;</span><span class="p">,</span> <span class="s2">&quot;enfo-cf&quot;</span><span class="p">,</span> <span class="s2">&quot;enfo-pf&quot;</span><span class="p">]},</span>
+    <span class="s2">&quot;aifs-single&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;aifs-single&quot;</span><span class="p">,</span> <span class="s2">&quot;0p25&quot;</span><span class="p">,</span> <span class="s2">&quot;oper&quot;</span><span class="p">],</span> <span class="s2">&quot;suffixes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;oper-fc&quot;</span><span class="p">]},</span>
+    <span class="s2">&quot;aifs-ens&quot;</span><span class="p">:</span>    <span class="p">{</span><span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;aifs-ens&quot;</span><span class="p">,</span> <span class="s2">&quot;0p25&quot;</span><span class="p">,</span> <span class="s2">&quot;enfo&quot;</span><span class="p">],</span>    <span class="s2">&quot;suffixes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;enfo-em&quot;</span><span class="p">,</span> <span class="s2">&quot;enfo-pf&quot;</span><span class="p">,</span> <span class="s2">&quot;enfo-cf&quot;</span><span class="p">]},</span>
+    <span class="s2">&quot;wave-single&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ifs&quot;</span><span class="p">,</span> <span class="s2">&quot;0p25&quot;</span><span class="p">,</span> <span class="s2">&quot;wave&quot;</span><span class="p">],</span>         <span class="s2">&quot;suffixes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;wave-fc&quot;</span><span class="p">]},</span>
+    <span class="s2">&quot;wave-ens&quot;</span><span class="p">:</span>    <span class="p">{</span><span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ifs&quot;</span><span class="p">,</span> <span class="s2">&quot;0p25&quot;</span><span class="p">,</span> <span class="s2">&quot;waef&quot;</span><span class="p">],</span>         <span class="s2">&quot;suffixes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;waef-cf&quot;</span><span class="p">,</span> <span class="s2">&quot;waef-pf&quot;</span><span class="p">]},</span>
+<span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_index_url</span><span class="p">(</span><span class="n">date_str</span><span class="p">,</span> <span class="n">run_h</span><span class="p">,</span> <span class="n">model_key</span><span class="p">):</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">MODEL_MAP</span><span class="p">[</span><span class="n">model_key</span><span class="p">]</span>
+    <span class="n">run_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">run_h</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">z&quot;</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">run_h</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">run_h</span><span class="si">}</span><span class="s2">z&quot;</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="p">[</span><span class="n">BASE</span><span class="p">,</span> <span class="n">date_str</span><span class="p">,</span> <span class="n">run_str</span><span class="p">]</span> <span class="o">+</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;parts&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">available_steps</span><span class="p">(</span><span class="n">date_str</span><span class="p">,</span> <span class="n">run_str</span><span class="p">,</span> <span class="n">model_key</span><span class="p">):</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">MODEL_MAP</span><span class="p">[</span><span class="n">model_key</span><span class="p">]</span>
+    <span class="n">run_z</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">run_str</span><span class="si">}</span><span class="s2">z&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">str</span><span class="p">(</span><span class="n">run_str</span><span class="p">)</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">run_str</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="p">[</span><span class="n">BASE</span><span class="p">,</span> <span class="n">date_str</span><span class="p">,</span> <span class="n">run_z</span><span class="p">]</span> <span class="o">+</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;parts&quot;</span><span class="p">]</span>
+    <span class="n">dir_url</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span>
+    <span class="n">suffix</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;suffixes&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">requests</span><span class="o">,</span><span class="w"> </span><span class="nn">re</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">dir_url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+        <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d</span><span class="si">{12}</span><span class="s1">-(\d+)h-&#39;</span> <span class="o">+</span> <span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">suffix</span><span class="p">)</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;\.grib2&#39;</span><span class="p">)</span>
+        <span class="n">steps</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pattern</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">dir_url</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">suffix</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dir_url</span><span class="p">,</span> <span class="p">[],</span> <span class="n">suffix</span>    
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="preflight-download-pin-a-safe-run-and-cache-what-well-use">
+<h2>3. Preflight &amp; download — pin a safe run and cache what we’ll use<a class="headerlink" href="#preflight-download-pin-a-safe-run-and-cache-what-well-use" title="Link to this heading">#</a></h2>
+<p><strong>Why this step</strong><br />
+We start with a <strong>safe IFS run</strong> (00z or 12z with a small publish buffer) and download only the files used later. Everything is cached under <code class="docutils literal notranslate"><span class="pre">./data</span></code>, and each file is validated (so half-downloads don’t sneak in).</p>
+<p><strong>What this cell does</strong></p>
+<ul class="simple">
+<li><p>Picks a conservative run if <code class="docutils literal notranslate"><span class="pre">fc_date</span></code>/<code class="docutils literal notranslate"><span class="pre">fc_time</span></code> are not set (or reuses yours).</p></li>
+<li><p>Tries that run first; if not online yet, <strong>falls back to latest</strong>.</p></li>
+<li><p>Fetches a compact set of files:</p>
+<ul>
+<li><p><strong>HRES sfc</strong>: <code class="docutils literal notranslate"><span class="pre">msl/2t/10u/10v</span></code>, step 0</p></li>
+<li><p><strong>HRES 2t time series</strong>: steps 0..24 by 3 h</p></li>
+<li><p><strong>ENS 2t time series</strong>: <strong>PF</strong> and <strong>CF</strong>, steps 0..24 by 3 h</p></li>
+<li><p><strong>HRES PL (t/u/v/r)</strong>: step 0 (for the sounding)</p></li>
+<li><p><strong>Waves</strong>: deterministic (<code class="docutils literal notranslate"><span class="pre">wave</span></code>) and ENS control (<code class="docutils literal notranslate"><span class="pre">waef</span></code>), step 0</p></li>
+<li><p><strong>AIFS single</strong>: <code class="docutils literal notranslate"><span class="pre">msl/2t</span></code>, step 0 (for AIFS–IFS comparisons)</p></li>
+</ul>
+</li>
+<li><p>Updates <code class="docutils literal notranslate"><span class="pre">fc_date</span></code>/<code class="docutils literal notranslate"><span class="pre">fc_time</span></code> to the <strong>actual run used</strong> so plot titles match reality.</p></li>
+<li><p>Prints a short summary with file sizes; missing items are shown as “(missing)”.</p></li>
+</ul>
+<p><strong>Tip</strong><br />
+If you want more horizon, increase the step lists here and re-run.</p>
+<p>Browse &amp; select a file that actually exists</p>
+<p>Pick a <strong>model family</strong>, <strong>date</strong> (last 4 UTC days), <strong>run</strong> (00/06/12/18), and then a <strong>step</strong> from the list we discover live from the index.<br />
+We only show steps that exist for your selection.</p>
+<ul class="simple">
+<li><p>If no steps appear: try a different run (e.g., <code class="docutils literal notranslate"><span class="pre">00</span></code> instead of <code class="docutils literal notranslate"><span class="pre">12</span></code>) or the previous UTC day.</p></li>
+<li><p>The file will be saved under <code class="docutils literal notranslate"><span class="pre">./data/</span></code> with the exact remote filename.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Minimal helpers used by the widget ---</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_as_int</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">none_ok</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Cast ints or strings like &#39;00&#39; to int. None -&gt; error unless none_ok=True.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">none_ok</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Expected int-like value, got None&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build_filename</span><span class="p">(</span><span class="n">date_str</span><span class="p">,</span> <span class="n">run_str</span><span class="p">,</span> <span class="n">step_h</span><span class="p">,</span> <span class="n">suffix</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Robust file name builder; accepts str/int; handles step==0; rejects Nones.</span>
+<span class="sd">    Example: 20250908120000-6h-oper-fc.grib2</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">date_str</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;date_str is required&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">suffix</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;suffix is required&quot;</span><span class="p">)</span>
+    <span class="n">run_i</span>  <span class="o">=</span> <span class="n">_as_int</span><span class="p">(</span><span class="n">run_str</span><span class="p">)</span>
+    <span class="n">step_i</span> <span class="o">=</span> <span class="n">_as_int</span><span class="p">(</span><span class="n">step_h</span><span class="p">)</span>
+    <span class="n">ts</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">date_str</span><span class="p">)</span><span class="si">}{</span><span class="n">run_i</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">0000&quot;</span>  <span class="c1"># YYYYMMDDHHMMSS</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ts</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">step_i</span><span class="si">}</span><span class="s2">h-</span><span class="si">{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">.grib2&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Original-style picker with safe defaults + step==0 fix + no duplicate prints ---</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">widgets</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="c1"># rolling 4 UTC days (newest first)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">date_opts</span> <span class="o">=</span> <span class="n">recent_utc_dates</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># your existing helper</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">timezone</span>
+    <span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+    <span class="n">date_opts</span> <span class="o">=</span> <span class="p">[(</span><span class="n">today</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">i</span><span class="p">))</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
+
+<span class="c1"># ensure fc_date/fc_time are present in options</span>
+<span class="k">if</span> <span class="s1">&#39;fc_date&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span> <span class="ow">and</span> <span class="n">fc_date</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">date_opts</span><span class="p">:</span>
+    <span class="n">date_opts</span> <span class="o">=</span> <span class="p">[</span><span class="n">fc_date</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">date_opts</span> <span class="k">if</span> <span class="n">d</span> <span class="o">!=</span> <span class="n">fc_date</span><span class="p">]</span>
+
+<span class="c1"># widgets (create first)</span>
+<span class="n">model_dd</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Model&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">MODEL_MAP</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="n">value</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">MODEL_MAP</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">date_dd</span>  <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Date (UTC)&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">date_opts</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">date_opts</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">run_dd</span>   <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Run (UTC)&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">RUNS_UTC</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">RUNS_UTC</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">step_dd</span>  <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Step (h)&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">[],</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">download_btn</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Download file&quot;</span><span class="p">,</span> <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+
+<span class="c1"># globals for later cells (unchanged)</span>
+<span class="n">target</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">date_str</span> <span class="o">=</span> <span class="n">run_str</span> <span class="o">=</span> <span class="n">model_key</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">step_h</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">dir_url</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">product_suffix</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># guard to avoid duplicate prints when we programmatically set step_dd.value</span>
+<span class="n">_setting_step</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># ---- set safe defaults BEFORE wiring observers ----</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">fc_date</span> <span class="ow">in</span> <span class="n">date_dd</span><span class="o">.</span><span class="n">options</span><span class="p">:</span> <span class="n">date_dd</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">fc_date</span>
+    <span class="k">if</span> <span class="n">fc_time</span> <span class="ow">in</span> <span class="n">run_dd</span><span class="o">.</span><span class="n">options</span><span class="p">:</span>  <span class="n">run_dd</span><span class="o">.</span><span class="n">value</span>  <span class="o">=</span> <span class="n">fc_time</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">refresh_steps</span><span class="p">(</span><span class="o">*</span><span class="n">_</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">date_str</span><span class="p">,</span> <span class="n">run_str</span><span class="p">,</span> <span class="n">model_key</span><span class="p">,</span> <span class="n">step_h</span><span class="p">,</span> <span class="n">dir_url</span><span class="p">,</span> <span class="n">product_suffix</span><span class="p">,</span> <span class="n">_setting_step</span>
+    <span class="k">with</span> <span class="n">out</span><span class="p">:</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dstr</span><span class="p">,</span> <span class="n">rstr</span><span class="p">,</span> <span class="n">mkey</span> <span class="o">=</span> <span class="n">date_dd</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">run_dd</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">model_dd</span><span class="o">.</span><span class="n">value</span>
+            <span class="n">durl</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">suf</span> <span class="o">=</span> <span class="n">available_steps</span><span class="p">(</span><span class="n">dstr</span><span class="p">,</span> <span class="n">rstr</span><span class="p">,</span> <span class="n">mkey</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">steps</span><span class="p">:</span>
+                <span class="n">step_dd</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">step_dd</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span><span class="p">;</span> <span class="n">download_btn</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No steps found. Try another date/run/model.&quot;</span><span class="p">)</span>
+                <span class="k">return</span>
+
+            <span class="n">steps</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">steps</span><span class="p">]</span>  <span class="c1"># ensure ints, so 0 behaves</span>
+            <span class="c1"># avoid firing on_step_change while we set the value</span>
+            <span class="n">_setting_step</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">step_dd</span><span class="o">.</span><span class="n">unobserve</span><span class="p">(</span><span class="n">on_step_change</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+                <span class="n">step_dd</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="n">steps</span>
+                <span class="n">default_step</span> <span class="o">=</span> <span class="n">steps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">step_dd</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">default_step</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="n">step_dd</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">on_step_change</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+                <span class="n">_setting_step</span> <span class="o">=</span> <span class="kc">False</span>
+
+            <span class="n">step_dd</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">download_btn</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">False</span>
+
+            <span class="c1"># stash globals</span>
+            <span class="n">date_str</span><span class="p">,</span> <span class="n">run_str</span><span class="p">,</span> <span class="n">model_key</span> <span class="o">=</span> <span class="n">dstr</span><span class="p">,</span> <span class="n">rstr</span><span class="p">,</span> <span class="n">mkey</span>
+            <span class="n">step_h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">step_dd</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+            <span class="n">dir_url</span> <span class="o">=</span> <span class="n">durl</span>
+            <span class="n">product_suffix</span> <span class="o">=</span> <span class="n">suf</span>
+
+            <span class="c1"># print selection ONCE (we do not print inside on_step_change when _setting_step is True)</span>
+            <span class="n">fname</span> <span class="o">=</span> <span class="n">build_filename</span><span class="p">(</span><span class="n">date_str</span><span class="p">,</span> <span class="n">run_str</span><span class="p">,</span> <span class="n">step_h</span><span class="p">,</span> <span class="n">product_suffix</span><span class="p">)</span>
+            <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;**Selected**: `</span><span class="si">{</span><span class="n">model_key</span><span class="si">}</span><span class="s2">` — `</span><span class="si">{</span><span class="n">date_str</span><span class="si">}</span><span class="s2">` `</span><span class="si">{</span><span class="n">run_str</span><span class="si">}</span><span class="s2">` — step `</span><span class="si">{</span><span class="n">step_h</span><span class="si">}</span><span class="s2">`  </span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;**Model**: `</span><span class="si">{</span><span class="n">product_suffix</span><span class="si">}</span><span class="s2">`  </span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;**File**: `</span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s2">`&quot;</span>
+            <span class="p">))</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">step_dd</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">step_dd</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span><span class="p">;</span> <span class="n">download_btn</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failed to list steps:&quot;</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">on_step_change</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">date_str</span><span class="p">,</span> <span class="n">run_str</span><span class="p">,</span> <span class="n">model_key</span><span class="p">,</span> <span class="n">step_h</span><span class="p">,</span> <span class="n">dir_url</span><span class="p">,</span> <span class="n">product_suffix</span><span class="p">,</span> <span class="n">_setting_step</span>
+    <span class="c1"># Ignore traitlets noise and programmatic updates during refresh</span>
+    <span class="k">if</span> <span class="n">change</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;value&quot;</span> <span class="ow">or</span> <span class="n">change</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;new&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">_setting_step</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">dstr</span><span class="p">,</span> <span class="n">rstr</span><span class="p">,</span> <span class="n">mkey</span> <span class="o">=</span> <span class="n">date_dd</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">run_dd</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">model_dd</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">durl</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">suf</span> <span class="o">=</span> <span class="n">available_steps</span><span class="p">(</span><span class="n">dstr</span><span class="p">,</span> <span class="n">rstr</span><span class="p">,</span> <span class="n">mkey</span><span class="p">)</span>
+
+    <span class="n">date_str</span><span class="p">,</span> <span class="n">run_str</span><span class="p">,</span> <span class="n">model_key</span> <span class="o">=</span> <span class="n">dstr</span><span class="p">,</span> <span class="n">rstr</span><span class="p">,</span> <span class="n">mkey</span>
+    <span class="n">step_h</span> <span class="o">=</span> <span class="n">_as_int</span><span class="p">(</span><span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">])</span>   <span class="c1"># robust cast</span>
+    <span class="n">dir_url</span> <span class="o">=</span> <span class="n">durl</span>
+    <span class="n">product_suffix</span> <span class="o">=</span> <span class="n">suf</span>
+    <span class="k">with</span> <span class="n">out</span><span class="p">:</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">fname</span> <span class="o">=</span> <span class="n">build_filename</span><span class="p">(</span><span class="n">date_str</span><span class="p">,</span> <span class="n">run_str</span><span class="p">,</span> <span class="n">step_h</span><span class="p">,</span> <span class="n">product_suffix</span><span class="p">)</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;**Selected**: `</span><span class="si">{</span><span class="n">model_key</span><span class="si">}</span><span class="s2">` — `</span><span class="si">{</span><span class="n">date_str</span><span class="si">}</span><span class="s2">` `</span><span class="si">{</span><span class="n">run_str</span><span class="si">}</span><span class="s2">` — step `</span><span class="si">{</span><span class="n">step_h</span><span class="si">}</span><span class="s2">`  </span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;**Product**: `</span><span class="si">{</span><span class="n">product_suffix</span><span class="si">}</span><span class="s2">`  </span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;**File**: `</span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s2">`&quot;</span>
+        <span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">on_download</span><span class="p">(</span><span class="n">_</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">target</span>
+    <span class="k">with</span> <span class="n">out</span><span class="p">:</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># Shared data dir</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_data_dir</span>
+            <span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">get_data_dir</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">);</span> <span class="n">DATA_DIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">fname</span> <span class="o">=</span> <span class="n">build_filename</span><span class="p">(</span><span class="n">date_str</span><span class="p">,</span> <span class="n">run_str</span><span class="p">,</span> <span class="n">step_h</span><span class="p">,</span> <span class="n">product_suffix</span><span class="p">)</span>
+        <span class="n">file_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dir_url</span><span class="si">}{</span><span class="n">fname</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="n">DATA_DIR</span> <span class="o">/</span> <span class="n">fname</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Downloading:&quot;</span><span class="p">,</span> <span class="n">file_url</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">file_url</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span> <span class="k">as</span> <span class="n">r</span><span class="p">:</span>
+                <span class="n">r</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">chunk</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saved:&quot;</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">target</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span><span class="o">/</span><span class="mf">1e6</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> MB)&quot;</span><span class="p">)</span>
+
+            <span class="c1"># keep following cells working unchanged</span>
+            <span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">target</span>
+            <span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;date_str&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">date_str</span>
+            <span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;run_str&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">run_str</span>
+            <span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;step_h&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="n">step_h</span>
+            <span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;dir_url&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">dir_url</span>
+            <span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;product_suffix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">product_suffix</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">target</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Download failed:&quot;</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+
+<span class="c1"># wire observers AFTER defaults are set</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="p">(</span><span class="n">model_dd</span><span class="p">,</span> <span class="n">date_dd</span><span class="p">,</span> <span class="n">run_dd</span><span class="p">):</span>
+    <span class="n">w</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">refresh_steps</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+<span class="n">step_dd</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">on_step_change</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+<span class="n">download_btn</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_download</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">model_dd</span><span class="p">,</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">date_dd</span><span class="p">,</span> <span class="n">run_dd</span><span class="p">]),</span> <span class="n">step_dd</span><span class="p">,</span> <span class="n">download_btn</span><span class="p">,</span> <span class="n">out</span><span class="p">]))</span>
+
+<span class="c1"># initial populate</span>
+<span class="n">refresh_steps</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "838b0ee7cb8143cc892ab835b53a70fb"}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Compatibility shim for older cells that expect `picker` ---</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="c1"># Ensure your download cell defines `target` as the saved GRIB path:</span>
+<span class="c1"># e.g. target = Path(&quot;data/hres_msl_2t_10uv.grib2&quot;)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">picker</span>  <span class="c1"># if a real widget exists, do nothing</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">_PickerShim</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">last_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">if</span> <span class="n">path</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">get_selected_local_path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_path</span>
+
+    <span class="c1"># expose a stable var novices can use elsewhere too</span>
+    <span class="n">TARGET_GRIB</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;target&quot;</span><span class="p">))</span> <span class="k">if</span> <span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;target&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="n">picker</span> <span class="o">=</span> <span class="n">_PickerShim</span><span class="p">(</span><span class="n">TARGET_GRIB</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="explore">
+<h2>4) Explore<a class="headerlink" href="#explore" title="Link to this heading">#</a></h2>
+<p>Once the data is saved we can open the downloaded GRIB with Earthkit and inspect it in a concise inventory.<br />
+We will use the <code class="docutils literal notranslate"><span class="pre">shortName</span></code> column (e.g., <code class="docutils literal notranslate"><span class="pre">2t</span></code>, <code class="docutils literal notranslate"><span class="pre">msl</span></code>, <code class="docutils literal notranslate"><span class="pre">tp</span></code>) for plotting next.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Explore: prefer the widget&#39;s picker; fall back to `target` saved by the Download button</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">earthkit.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">from_source</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># 1) Try the widget</span>
+<span class="k">if</span> <span class="s1">&#39;picker&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">picker</span><span class="p">,</span> <span class="s1">&#39;last_path&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span>
+            <span class="n">picker</span><span class="o">.</span><span class="n">get_selected_local_path</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">picker</span><span class="p">,</span> <span class="s1">&#39;get_selected_local_path&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># 2) Fall back to the explicit path set by the download step</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">p</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">Path</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span> <span class="ow">and</span> <span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;target&#39;</span><span class="p">])</span>
+
+<span class="c1"># 3) Friendly error if nothing was downloaded</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">p</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">Path</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;No file downloaded yet. Use the Download button first.&quot;</span><span class="p">)</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">from_source</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">22</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="c1"># 3) Friendly error if nothing was downloaded</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">p</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">Path</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+<span class="ne">---&gt; </span><span class="mi">22</span>     <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;No file downloaded yet. Use the Download button first.&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">from_source</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="n">ds</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+
+<span class="ne">FileNotFoundError</span>: No file downloaded yet. Use the Download button first.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-by-shortname">
+<h2>5) Plot by <code class="docutils literal notranslate"><span class="pre">shortName</span></code><a class="headerlink" href="#plot-by-shortname" title="Link to this heading">#</a></h2>
+<p>Run the cell and type one of the <code class="docutils literal notranslate"><span class="pre">shortName</span></code> values in the widget, selecting one from the table we generated in previous step.<br />
+If the plot fails, please check the spelling and try a another parameter.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">widgets</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span>
+
+<span class="n">param</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;shortName&quot;</span><span class="p">,</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;e.g. 2t, msl, tp&quot;</span><span class="p">)</span>
+<span class="n">plot_btn</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Plot&quot;</span><span class="p">,</span> <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;primary&quot;</span><span class="p">)</span>
+<span class="n">outp</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_plot</span><span class="p">(</span><span class="n">_</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">outp</span><span class="p">:</span>
+        <span class="n">outp</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="p">(</span><span class="n">param</span><span class="o">.</span><span class="n">value</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Type a shortName from the Explore table above (e.g. 2t, msl, tp).&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
+            <span class="n">sn</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">metadata</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;shortName&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">sn</span> <span class="o">==</span> <span class="n">name</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">quick_plot</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> — </span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="n">target</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Plot failed for this field:&quot;</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+                <span class="k">return</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;shortName &#39;</span><span class="si">{</span><span class="n">param</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">&#39; not found. Check the Explore table and try again.&quot;</span><span class="p">)</span>
+
+<span class="n">plot_btn</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">_plot</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">param</span><span class="p">,</span> <span class="n">plot_btn</span><span class="p">]),</span> <span class="n">outp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "24ab5a626b684868bfc060c8c7233864", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "48ee80cf22d94ef2aa2928e2d063e815", "version_major": 2, "version_minor": 0}</script><img alt="../_images/22984f62addc6bc83c941d677e869edafff90b60c86cc1c77eabc19427c1b0b9.png" src="../_images/22984f62addc6bc83c941d677e869edafff90b60c86cc1c77eabc19427c1b0b9.png" />
+</div>
+</div>
+</section>
+<section id="appendix-cli-python-downloads">
+<h2>Appendix · CLI &amp; Python downloads<a class="headerlink" href="#appendix-cli-python-downloads" title="Link to this heading">#</a></h2>
+<p>To wrap our basic introduction to ECMWF open-data, we will also explore short examples of data access for slighlty more advanced programmatic access. You can reuse the printed examples and run them in your terminal or use these as foundation to <strong>script</strong> or <strong>automate</strong> downloads outside the notebook.</p>
+<p><strong>Naming:</strong> we save using the <strong>remote filename</strong> (e.g., <code class="docutils literal notranslate"><span class="pre">20250905120000-0h-oper-fc.grib2</span></code>), matching what you see on the ECMWF index page.</p>
+<blockquote>
+<div><p>If the rolling archive has updated (you started with this notebook a couple hours before), please refresh by re-running the selector cells on top (code cell 2 and 3) first, and then re-run the URL cell below.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Appendix bridge for A01: recreate picker-like state + FILENAME/IDX ---</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+
+<span class="c1"># 0) Resolve the GRIB file path produced by your download cell</span>
+<span class="n">p</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;TARGET_GRIB&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">globals</span><span class="p">()[</span><span class="n">name</span><span class="p">]:</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="nb">globals</span><span class="p">()[</span><span class="n">name</span><span class="p">])</span>
+        <span class="k">break</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">p</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">p</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span>
+        <span class="s2">&quot;No downloaded GRIB found. Run the download cell first (it should set `target` or `TARGET_GRIB`).&quot;</span>
+    <span class="p">)</span>
+
+<span class="c1"># 1) Ensure a shared data dir</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_data_dir</span>
+    <span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">get_data_dir</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">);</span> <span class="n">DATA_DIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># 2) Parse filename: YYYYMMDDHHMMSS-&lt;step&gt;h-&lt;suffix&gt;.grib2</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(?P&lt;ts&gt;\d</span><span class="si">{14}</span><span class="s1">)-(?P&lt;step&gt;\d+)h-(?P&lt;suffix&gt;[^.]+)\.grib2$&#39;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">m</span><span class="p">:</span>
+    <span class="n">ts</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;ts&quot;</span><span class="p">)</span>
+    <span class="n">date_str</span> <span class="o">=</span> <span class="n">ts</span><span class="p">[:</span><span class="mi">8</span><span class="p">]</span>        <span class="c1"># YYYYMMDD</span>
+    <span class="n">run_str</span>  <span class="o">=</span> <span class="n">ts</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>      <span class="c1"># HH</span>
+    <span class="n">step_h</span>   <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;step&quot;</span><span class="p">))</span>
+    <span class="n">product_suffix</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;suffix&quot;</span><span class="p">)</span>  <span class="c1"># e.g. oper-fc, enfo-ef, wave-fc, waef-ef</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Fallbacks if the filename can&#39;t be parsed (shouldn&#39;t happen with standard names)</span>
+    <span class="n">date_str</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;fc_date&quot;</span><span class="p">,</span> <span class="s2">&quot;????????&quot;</span><span class="p">)</span>
+    <span class="n">run_str</span>  <span class="o">=</span> <span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;fc_time&quot;</span><span class="p">,</span> <span class="s2">&quot;??&quot;</span><span class="p">)</span>
+    <span class="n">step_h</span>   <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;step_h&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">product_suffix</span> <span class="o">=</span> <span class="s2">&quot;oper-fc&quot;</span>
+
+<span class="c1"># 3) Reconstruct the directory URL (A01 uses IFS 0p25 products)</span>
+<span class="c1"># stream is before the dash in the suffix: oper / enfo / wave / waef</span>
+<span class="n">stream</span> <span class="o">=</span> <span class="n">product_suffix</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">model_root</span> <span class="o">=</span> <span class="s2">&quot;ifs&quot;</span>  <span class="c1"># A01 uses IFS products</span>
+<span class="n">dir_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://data.ecmwf.int/forecasts/</span><span class="si">{</span><span class="n">date_str</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">run_str</span><span class="si">}</span><span class="s2">z/</span><span class="si">{</span><span class="n">model_root</span><span class="si">}</span><span class="s2">/0p25/</span><span class="si">{</span><span class="n">stream</span><span class="si">}</span><span class="s2">/&quot;</span>
+
+<span class="c1"># 4) Variables appendix cells expect</span>
+<span class="n">FILENAME</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">name</span>
+<span class="n">FILE_URL</span> <span class="o">=</span> <span class="n">dir_url</span> <span class="o">+</span> <span class="n">FILENAME</span>
+<span class="n">IDX</span>      <span class="o">=</span> <span class="n">FILE_URL</span> <span class="o">+</span> <span class="s2">&quot;.index&quot;</span>   <span class="c1"># per-file JSON index for byte-range demos</span>
+
+<span class="c1"># 5) Minimal picker shim with .state (to satisfy appendix code)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">_PickerShim</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_path</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">local_path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;date&quot;</span><span class="p">:</span>   <span class="n">date_str</span><span class="p">,</span>
+            <span class="s2">&quot;run&quot;</span><span class="p">:</span>    <span class="n">run_str</span><span class="p">,</span>
+            <span class="s2">&quot;model&quot;</span><span class="p">:</span>  <span class="s2">&quot;ifs-single&quot;</span><span class="p">,</span>   <span class="c1"># not used by the appendix, but present</span>
+            <span class="s2">&quot;step&quot;</span><span class="p">:</span>   <span class="n">step_h</span><span class="p">,</span>
+            <span class="s2">&quot;dir_url&quot;</span><span class="p">:</span><span class="n">dir_url</span><span class="p">,</span>
+            <span class="s2">&quot;suffix&quot;</span><span class="p">:</span> <span class="n">product_suffix</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_selected_local_path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_path</span>
+
+<span class="n">picker</span> <span class="o">=</span> <span class="n">_PickerShim</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Appendix bridge ready:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  local file :&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  dir_url    :&quot;</span><span class="p">,</span> <span class="n">dir_url</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  FILENAME   :&quot;</span><span class="p">,</span> <span class="n">FILENAME</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  IDX        :&quot;</span><span class="p">,</span> <span class="n">IDX</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Appendix bridge ready:
+  local file : /Users/valtze/ecmwf-open-data-guide/data/20260511000000-0h-oper-fc.grib2
+  dir_url    : https://data.ecmwf.int/forecasts/20260511/00z/ifs/0p25/oper/
+  FILENAME   : 20260511000000-0h-oper-fc.grib2
+  IDX        : https://data.ecmwf.int/forecasts/20260511/00z/ifs/0p25/oper/20260511000000-0h-oper-fc.grib2.index
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_data_dir</span>
+
+
+<span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">get_data_dir</span><span class="p">()</span>
+
+<span class="c1"># Pull current state from the widget</span>
+<span class="n">state</span> <span class="o">=</span> <span class="n">picker</span><span class="o">.</span><span class="n">state</span>  <span class="c1"># {&#39;date&#39;,&#39;run&#39;,&#39;model&#39;,&#39;step&#39;,&#39;dir_url&#39;,&#39;suffix&#39;}</span>
+<span class="n">required</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;run&#39;</span><span class="p">,</span> <span class="s1">&#39;step&#39;</span><span class="p">,</span> <span class="s1">&#39;suffix&#39;</span><span class="p">,</span> <span class="s1">&#39;dir_url&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">required</span><span class="p">),</span> \
+    <span class="s2">&quot;Select date/run/model above first (then re-run this cell).&quot;</span>
+
+<span class="n">FILENAME</span> <span class="o">=</span> <span class="n">build_filename</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="n">state</span><span class="p">[</span><span class="s1">&#39;run&#39;</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="s1">&#39;step&#39;</span><span class="p">]),</span> <span class="n">state</span><span class="p">[</span><span class="s1">&#39;suffix&#39;</span><span class="p">])</span>
+<span class="n">URL</span>      <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">state</span><span class="p">[</span><span class="s1">&#39;dir_url&#39;</span><span class="p">]</span><span class="si">}{</span><span class="n">FILENAME</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">IDX</span>      <span class="o">=</span> <span class="n">URL</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.grib2&quot;</span><span class="p">,</span> <span class="s2">&quot;.index&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DATA_DIR:&quot;</span><span class="p">,</span> <span class="n">DATA_DIR</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File name:&quot;</span><span class="p">,</span> <span class="n">FILENAME</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File URL:&quot;</span><span class="p">,</span> <span class="n">URL</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Index URL:&quot;</span><span class="p">,</span> <span class="n">IDX</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DATA_DIR: /Users/valtze/ecmwf-open-data-guide/data
+File name: 20260511000000-0h-oper-fc.grib2
+File URL: https://data.ecmwf.int/forecasts/20260511/00z/ifs/0p25/oper/20260511000000-0h-oper-fc.grib2
+Index URL: https://data.ecmwf.int/forecasts/20260511/00z/ifs/0p25/oper/20260511000000-0h-oper-fc.index
+</pre></div>
+</div>
+</div>
+</div>
+<section id="direct-fullfile-download">
+<h3>1) Direct full‑file download<a class="headerlink" href="#direct-fullfile-download" title="Link to this heading">#</a></h3>
+<p><strong>When to use:</strong> you need the whole GRIB (multiple parameters/levels).</p>
+<ul class="simple">
+<li><p><strong>Notebook</strong>: run this cell directly (save to <code class="docutils literal notranslate"><span class="pre">/data</span></code>).</p></li>
+<li><p><strong>Terminal</strong>: copy the printed commands.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jupyter (curl, resumable) → /data</span>
+<span class="o">!</span>curl<span class="w"> </span>-L<span class="w"> </span>-C<span class="w"> </span>-<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;{DATA_DIR}/{FILENAME}&quot;</span><span class="w"> </span><span class="s2">&quot;{URL}&quot;</span>
+
+<span class="c1"># Terminal copy/paste</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;curl -L -C - -o &quot;data/</span><span class="si">{</span><span class="n">FILENAME</span><span class="si">}</span><span class="s1">&quot; &quot;</span><span class="si">{</span><span class="n">URL</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;wget -c -O &quot;data/</span><span class="si">{</span><span class="n">FILENAME</span><span class="si">}</span><span class="s1">&quot; &quot;</span><span class="si">{</span><span class="n">URL</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>** Resuming transfer from byte position 120863331
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    57    0    57    0     0     93      0 --:--:-- --:--:-- --:--:--    93
+curl -L -C - -o &quot;data/20260511000000-0h-oper-fc.grib2&quot; &quot;https://data.ecmwf.int/forecasts/20260511/00z/ifs/0p25/oper/20260511000000-0h-oper-fc.grib2&quot;
+wget -c -O &quot;data/20260511000000-0h-oper-fc.grib2&quot; &quot;https://data.ecmwf.int/forecasts/20260511/00z/ifs/0p25/oper/20260511000000-0h-oper-fc.grib2&quot;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="python-requests-resumable">
+<h3>2) Python <code class="docutils literal notranslate"><span class="pre">requests</span></code> (resumable)<a class="headerlink" href="#python-requests-resumable" title="Link to this heading">#</a></h3>
+<p><strong>When to use:</strong> example to build programmatic workflows or CI. This will also resume download if file gets only partially downloaded.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">dst</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">)</span> <span class="o">/</span> <span class="n">FILENAME</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">dst</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="n">dst</span><span class="o">.</span><span class="n">suffix</span> <span class="o">+</span> <span class="s2">&quot;.part&quot;</span><span class="p">)</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span> <span class="k">if</span> <span class="n">tmp</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="k">else</span> <span class="mi">0</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Range&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;bytes=</span><span class="si">{</span><span class="n">pos</span><span class="si">}</span><span class="s2">-&quot;</span><span class="p">}</span> <span class="k">if</span> <span class="n">pos</span> <span class="k">else</span> <span class="p">{}</span>
+<span class="k">with</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1200</span><span class="p">))</span> <span class="k">as</span> <span class="n">r</span><span class="p">:</span>
+    <span class="n">r</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="s2">&quot;ab&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">chunk</span><span class="p">:</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+<span class="n">tmp</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">dst</span><span class="p">)</span>
+<span class="n">target</span> <span class="o">=</span> <span class="n">dst</span>  
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saved:&quot;</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved: /Users/valtze/ecmwf-open-data-guide/data/20260511000000-0h-oper-fc.grib2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="singleparameter-download-http-range">
+<h3>3) Single‑parameter download (HTTP <strong>Range</strong>)<a class="headerlink" href="#singleparameter-download-http-range" title="Link to this heading">#</a></h3>
+<p><strong>What it does:</strong> grabs <strong>only one parameter</strong> (e.g., <code class="docutils literal notranslate"><span class="pre">2t</span></code>) from a large GRIB using byte‑ranges.<br />
+<strong>How it works:</strong> we fetch the paired <code class="docutils literal notranslate"><span class="pre">.index</span></code> file (JSON‑lines) to find <code class="docutils literal notranslate"><span class="pre">_offset</span></code> and <code class="docutils literal notranslate"><span class="pre">_length</span></code> for that parameter,<br />
+then request exactly those bytes from the <code class="docutils literal notranslate"><span class="pre">.grib2</span></code> using the <code class="docutils literal notranslate"><span class="pre">Range</span></code> header. You can interpret this as cutting out only the needed data from whole file (GRIB message).</p>
+<p><strong>When to use:</strong> quick tests, bandwidth‑limited environments, teaching examples, and when you only need one field.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span><span class="o">,</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">PARAM</span> <span class="o">=</span> <span class="s2">&quot;2t&quot;</span>  <span class="c1"># change to any &#39;shortName&#39; present in the file (see Explore table above)</span>
+
+<span class="n">txt</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">IDX</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;&quot;(param|shortName)&quot;\s*:\s*&quot;&#39;</span> <span class="o">+</span> <span class="n">PARAM</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;&quot;.*?&quot;_offset&quot;\s*:\s*(\d+).*?&quot;_length&quot;\s*:\s*(\d+)&#39;</span><span class="p">,</span> <span class="n">txt</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">S</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">m</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">PARAM</span><span class="si">!r}</span><span class="s2"> not found in index: </span><span class="si">{</span><span class="n">IDX</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">START</span><span class="p">,</span> <span class="n">LENGTH</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)),</span> <span class="nb">int</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">END</span> <span class="o">=</span> <span class="n">START</span> <span class="o">+</span> <span class="n">LENGTH</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="n">slice_name</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">FILENAME</span><span class="p">)</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">PARAM</span><span class="si">}</span><span class="s2">.grib2&quot;</span>
+<span class="n">slice_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">)</span> <span class="o">/</span> <span class="n">slice_name</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Range bytes:&quot;</span><span class="p">,</span> <span class="n">START</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">END</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saving:&quot;</span><span class="p">,</span> <span class="n">slice_path</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Range&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;bytes=</span><span class="si">{</span><span class="n">START</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">END</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">},</span> <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span> <span class="k">as</span> <span class="n">r</span><span class="p">:</span>
+    <span class="n">r</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">slice_path</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="mi">256</span><span class="o">*</span><span class="mi">1024</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">chunk</span><span class="p">:</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saved single-param slice:&quot;</span><span class="p">,</span> <span class="n">slice_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Range bytes: 80616608 - 81279046
+Saving: /Users/valtze/ecmwf-open-data-guide/data/20260511000000-0h-oper-fc_2t.grib2
+Saved single-param slice: /Users/valtze/ecmwf-open-data-guide/data/20260511000000-0h-oper-fc_2t.grib2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ecmwf-opendata-client-simplest-fetch">
+<h3>4) <code class="docutils literal notranslate"><span class="pre">ecmwf-opendata</span></code> client — simplest fetch<a class="headerlink" href="#ecmwf-opendata-client-simplest-fetch" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">ecmwf-opendata</span></code> Python client is the recommended programmatic access path.
+It handles run selection, retries, and URL construction automatically — no need to browse the index manually.</p>
+<p><strong>When to use:</strong> clean scripts, automation, CI pipelines, when you want robust code that survives URL structure changes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ecmwf.opendata</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_data_dir</span>
+
+<span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">get_data_dir</span><span class="p">()</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+
+<span class="c1"># Fetch IFS ENS control (replaces former HRES since 50r1), step +24h</span>
+<span class="n">c</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+    <span class="n">date</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span>
+    <span class="n">stream</span><span class="o">=</span><span class="s2">&quot;enfo&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;cf&quot;</span><span class="p">,</span>
+    <span class="n">param</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;2t&quot;</span><span class="p">,</span> <span class="s2">&quot;msl&quot;</span><span class="p">,</span> <span class="s2">&quot;tp&quot;</span><span class="p">],</span>
+    <span class="n">target</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s2">&quot;ifs_simple.grib2&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done —&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">((</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s2">&quot;ifs_simple.grib2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span> <span class="o">/</span> <span class="mf">1e6</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;MB&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "1d93d713bc2f48f9ae19e47604fb09a5", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Done — 2.1 MB
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="earthkit-direct-fetch-no-file-needed">
+<h3>5) earthkit direct fetch — no file needed<a class="headerlink" href="#earthkit-direct-fetch-no-file-needed" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">earthkit.data</span></code> can retrieve open data directly into memory without saving to disk.
+Useful for quick exploration, interactive work, and keeping workflows clean.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">earthkit.data</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ekd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">earthkit.plots</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ekp</span>
+
+<span class="c1"># Fetch directly into memory — no target file needed</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">ekd</span><span class="o">.</span><span class="n">from_source</span><span class="p">(</span><span class="s2">&quot;ecmwf-open-data&quot;</span><span class="p">,</span>
+    <span class="n">date</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span>
+    <span class="n">stream</span><span class="o">=</span><span class="s2">&quot;enfo&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;cf&quot;</span><span class="p">,</span>
+    <span class="n">param</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;2t&quot;</span><span class="p">])</span>
+
+<span class="n">ds</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "ada9ded415e0443f9802860b73386fcc", "version_major": 2, "version_minor": 0}</script><div class="output text_html"><style type="text/css">
+#T_0c163 th {
+  text-align: left;
+}
+#T_0c163_row0_col0, #T_0c163_row0_col1, #T_0c163_row0_col2, #T_0c163_row0_col3, #T_0c163_row0_col4, #T_0c163_row0_col5, #T_0c163_row0_col6, #T_0c163_row0_col7, #T_0c163_row0_col8 {
+  text-align: left;
+}
+</style>
+<table id="T_0c163">
+  <thead>
+    <tr>
+      <th class="blank" >&nbsp;</th>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_0c163_level0_col0" class="col_heading level0 col0" >level</th>
+      <th id="T_0c163_level0_col1" class="col_heading level0 col1" >date</th>
+      <th id="T_0c163_level0_col2" class="col_heading level0 col2" >time</th>
+      <th id="T_0c163_level0_col3" class="col_heading level0 col3" >step</th>
+      <th id="T_0c163_level0_col4" class="col_heading level0 col4" >paramId</th>
+      <th id="T_0c163_level0_col5" class="col_heading level0 col5" >class</th>
+      <th id="T_0c163_level0_col6" class="col_heading level0 col6" >stream</th>
+      <th id="T_0c163_level0_col7" class="col_heading level0 col7" >type</th>
+      <th id="T_0c163_level0_col8" class="col_heading level0 col8" >experimentVersionNumber</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >shortName</th>
+      <th class="index_name level1" >typeOfLevel</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+      <th class="blank col6" >&nbsp;</th>
+      <th class="blank col7" >&nbsp;</th>
+      <th class="blank col8" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_0c163_level0_row0" class="row_heading level0 row0" >2t</th>
+      <th id="T_0c163_level1_row0" class="row_heading level1 row0" >heightAboveGround</th>
+      <td id="T_0c163_row0_col0" class="data row0 col0" >2</td>
+      <td id="T_0c163_row0_col1" class="data row0 col1" >20260510</td>
+      <td id="T_0c163_row0_col2" class="data row0 col2" >0</td>
+      <td id="T_0c163_row0_col3" class="data row0 col3" >24</td>
+      <td id="T_0c163_row0_col4" class="data row0 col4" >167</td>
+      <td id="T_0c163_row0_col5" class="data row0 col5" >od</td>
+      <td id="T_0c163_row0_col6" class="data row0 col6" >enfo</td>
+      <td id="T_0c163_row0_col7" class="data row0 col7" >cf</td>
+      <td id="T_0c163_row0_col8" class="data row0 col8" >0001</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">shortName</span><span class="o">=</span><span class="s2">&quot;2t&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">ekp</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<span class="n">m</span><span class="o">.</span><span class="n">quickplot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;IFS ENS control — 2t +24h (earthkit direct fetch)&quot;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c0c7b82e0019560455585a235c364bf3f50e4847a476b917bc9794a23c24d7c6.png" src="../_images/c0c7b82e0019560455585a235c364bf3f50e4847a476b917bc9794a23c24d7c6.png" />
+</div>
+</div>
+</section>
+<section id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>No steps found</strong> — The run may not be published yet. Usually trying an earlier run fixes the issue.</p></li>
+<li><p><strong>Plot fails</strong> — Re-check the <code class="docutils literal notranslate"><span class="pre">shortName</span></code> in the Explore table; try <code class="docutils literal notranslate"><span class="pre">2t</span></code> or <code class="docutils literal notranslate"><span class="pre">msl</span></code> first.</p></li>
+</ul>
+</section>
+</section>
+<section id="take-home-messages">
+<h2>Take-home messages<a class="headerlink" href="#take-home-messages" title="Link to this heading">#</a></h2>
+<p>You have just:</p>
+<ul class="simple">
+<li><p>Understood the <strong>ECMWF Open Data catalogue</strong> structure and the <strong>50r1 naming changes</strong></p></li>
+<li><p>Browsed the <strong>live index</strong> at <code class="docutils literal notranslate"><span class="pre">data.ecmwf.int</span></code> and picked a real run/step</p></li>
+<li><p>Downloaded a GRIB2 file using three methods (client, curl, HTTP Range)</p></li>
+<li><p>Inspected contents with <code class="docutils literal notranslate"><span class="pre">earthkit.data</span></code> and plotted a field by <code class="docutils literal notranslate"><span class="pre">shortName</span></code></p></li>
+</ul>
+<hr class="docutils" />
+<section id="next-steps">
+<h3>Next steps<a class="headerlink" href="#next-steps" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Notebook A02 — Open Data: retrieval and plotting with earthkit</strong><br />
+Automate safe run/step selection; fetch IFS, AIFS, and ENS; compare models; Africa domain; vertical profile.</p></li>
+<li><p><strong>Notebook A03 — Cloud endpoints (AWS S3, Azure, GCS)</strong><br />
+Fetch the same data without the <code class="docutils literal notranslate"><span class="pre">ecmwf-opendata</span></code> client using HTTP Range requests directly.</p></li>
+<li><p><strong>Notebook B01 — Copernicus ERA5 via CDS</strong><br />
+Access climate reanalysis (1940–present) using <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> and <code class="docutils literal notranslate"><span class="pre">earthkit.data</span></code>.</p></li>
+</ul>
+</section>
+<section id="support-feedback">
+<h3>Support &amp; feedback<a class="headerlink" href="#support-feedback" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Questions and bug reports: <a class="reference external" href="https://support.ecmwf.int">support.ecmwf.int</a></p></li>
+<li><p>Open Data documentation: <a class="reference external" href="https://confluence.ecmwf.int/display/DAC/ECMWF+open+data">confluence.ecmwf.int/display/DAC/ECMWF+open+data</a></p></li>
+<li><p>This notebook: <a class="reference external" href="https://github.com/valtzen/demo">github.com/valtzen/demo</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ECMWF Open Data — Interactive Guide</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="A02_open_data_earthkit.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">ECMWF Open Data — Retrieval &amp; Plotting with earthkit</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-in-the-catalogue-as-of-ifs-cycle-50r1-may-2026">What’s in the catalogue (as of IFS Cycle 50r1, May 2026)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-coming">What’s coming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#licence">Licence</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecmwf-open-data-quick-facts-naming-50r1">ECMWF Open Data — quick facts &amp; naming (50r1)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-naming-since-ifs-cycle-50r1-12-may-2026">Key naming since IFS Cycle 50r1 (12 May 2026)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-endpoints">Access endpoints</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-imports">1) Setup &amp; imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#browse-the-live-index">2) Browse the live index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preflight-download-pin-a-safe-run-and-cache-what-well-use">3. Preflight &amp; download — pin a safe run and cache what we’ll use</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore">4) Explore</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-by-shortname">5) Plot by <code class="docutils literal notranslate"><span class="pre">shortName</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-cli-python-downloads">Appendix · CLI &amp; Python downloads</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-fullfile-download">1) Direct full‑file download</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-requests-resumable">2) Python <code class="docutils literal notranslate"><span class="pre">requests</span></code> (resumable)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#singleparameter-download-http-range">3) Single‑parameter download (HTTP <strong>Range</strong>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecmwf-opendata-client-simplest-fetch">4) <code class="docutils literal notranslate"><span class="pre">ecmwf-opendata</span></code> client — simplest fetch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#earthkit-direct-fetch-no-file-needed">5) earthkit direct fetch — no file needed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-home-messages">Take-home messages</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next steps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#support-feedback">Support &amp; feedback</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Valters Žeižis (ECMWF)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
