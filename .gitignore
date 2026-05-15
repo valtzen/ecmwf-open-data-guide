@@ -2,3 +2,11 @@ book/_build/
 _build/
 book/_build/
 _build/
+data/
+book/_build/
+_build/
+notebooks/__pycache__/
+notebooks/.ipynb_checkpoints/
+.ipynb_checkpoints/
+*.pyc
+.DS_Store
