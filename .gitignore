@@ -10,3 +10,11 @@ notebooks/.ipynb_checkpoints/
 .ipynb_checkpoints/
 *.pyc
 .DS_Store
+data/
+book/_build/
+_build/
+notebooks/__pycache__/
+notebooks/.ipynb_checkpoints/
+.ipynb_checkpoints/
+*.pyc
+.DS_Store
