@@ -1,4 +1,4 @@
-# ECMWF Open Data — Interactive Guide
+# ECMWF Open Data Interactive Guide
 
 Practical Jupyter notebooks for accessing and working with ECMWF forecast data and Copernicus climate services.
 
