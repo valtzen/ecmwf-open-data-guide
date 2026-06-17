@@ -48,7 +48,7 @@ jupyter lab
 ```
 
 **Run in browser (no install):**  
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/valtzen/demo/main)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/valtzen/ecmwf-open-data-guide/main)
 
 ---
 

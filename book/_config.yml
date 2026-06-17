@@ -24,7 +24,7 @@ html:
   home_page_in_navbar: false
 
 repository:
-  url: https://github.com/valtzen/demo
+  url: https://github.com/valtzen/ecmwf-open-data-guide
   branch: main
   path_to_book: book
 

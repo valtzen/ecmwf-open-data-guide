@@ -1,21 +1,21 @@
-# ECMWF Open Data — Interactive Guide
+# ECMWF Open Data: Interactive Guide
 
 Practical Jupyter notebooks for accessing and working with ECMWF forecast data and Copernicus climate services.
 
 ## Notebooks
 
-**A — ECMWF Open Data** (no credentials)
-- `A01` — Catalog & access mechanisms (50r1 naming, browse live index, download GRIB2)
-- `A02` — Retrieval & plotting with earthkit (IFS vs AIFS, ENS spread, Africa maps, sounding)
-- `A03` — Cloud endpoints (AWS S3 HTTP Range, Azure STAC, Google Cloud)
+**A: ECMWF Open Data** (no credentials)
+- `A01`: Catalog & access mechanisms (50r1 naming, browse live index, download GRIB2)
+- `A02`: Retrieval & plotting with earthkit (IFS vs AIFS, ENS spread, Africa maps, sounding)
+- `A03`: Cloud endpoints (AWS S3 HTTP Range, Azure STAC, Google Cloud)
 
-**B — Copernicus CDS / ADS** (free account)
-- `B01` — ERA5 reanalysis via CDS
-- `B02` — SEAS5 seasonal forecasts (Africa precipitation anomalies)
-- `B03` — CAMS dust (West Africa, ADS)
+**B: Copernicus CDS / ADS** (free account)
+- `B01`: ERA5 reanalysis via CDS
+- `B02`: SEAS5 seasonal forecasts (Africa precipitation anomalies)
+- `B03`: CAMS dust (West Africa, ADS)
 
-**C — SOFF** (WMO members, pre-executed)
-- `C01` — WMO NMHS operational data access, model levels, WRF/LAM initialisation
+**C: SOFF** (WMO members, pre-executed)
+- `C01`: WMO NMHS operational data access, model levels, WRF/LAM initialisation
 
 ## Setup
 
