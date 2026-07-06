@@ -1,29 +1,42 @@
 # ECMWF Open Data: Interactive Guide
 
-Practical Jupyter notebooks for accessing and working with ECMWF forecast data and Copernicus climate services.
+Practical Jupyter notebooks for accessing and working with ECMWF forecast data and Copernicus climate services, with a focus on applications for Africa.
 
 ## Notebooks
 
-**A: ECMWF Open Data** (no credentials)
-- `A01`: Catalog & access mechanisms (50r1 naming, browse live index, download GRIB2)
-- `A02`: Retrieval & plotting with earthkit (IFS vs AIFS, ENS spread, Africa maps, sounding)
-- `A03`: Cloud endpoints (AWS S3 HTTP Range, Azure STAC, Google Cloud)
+Notebooks are ordered by access mechanism, from fully open (no credentials) to registered access, ending with an applied case study.
 
-**B: Copernicus CDS / ADS** (free account)
-- `B01`: ERA5 reanalysis via CDS
-- `B02`: SEAS5 seasonal forecasts (Africa precipitation anomalies)
-- `B03`: CAMS dust (West Africa, ADS)
+| # | Notebook | What it covers | Access needed |
+|---|----------|----------------|---------------|
+| 01 | `01_opendata_catalog` | ECMWF Open Data catalogue: 50r1 naming conventions, browsing the live index, downloading raw GRIB2 | None |
+| 02 | `02_opendata_download_methods` | Download methods compared: direct HTTP, the `ecmwf-opendata` client, scripted patterns | None |
+| 03 | `03_opendata_earthkit_plots` | Retrieval and plotting with earthkit: IFS vs AIFS, ENS spread, Africa maps, vertical sounding | None |
+| 04 | `04_opendata_cloud_endpoints` | Open data from cloud mirrors: AWS S3 byte ranges, Azure STAC, Google Cloud | None |
+| 05 | `05_cds_era5_reanalysis` | ERA5 monthly reanalysis via the CDS API: retrieve, load, map | Free CDS account |
+| 06 | `06_cds_seas5_seasonal` | SEAS5 seasonal forecasts via CDS: Africa precipitation anomalies (with S2S note) | Free CDS account |
+| 07 | `07_ads_cams_dust` | CAMS dust forecast via the ADS API: West Africa case | Free ADS account |
+| 08 | `08_wmo_nmhs_data_access` | Operational data access for WMO NMHSs: model levels, LAM/WRF initialisation data (pre-executed) | WMO member NMHS |
+| 09 | `09_case_study_elnino_outlook` | Case study: monitoring El Niño impact on African seasonal rainfall with SEAS5 anomalies, drought probabilities, terciles, ensemble plumes | Free CDS account |
 
-**C: SOFF** (WMO members, pre-executed)
-- `C01`: WMO NMHS operational data access, model levels, WRF/LAM initialisation
+## Repository layout
+
+```
+notebooks/    the guide (01-09) plus shared helpers (_utils.py, add_attribution.py)
+figures/      figures saved by the notebooks, with C3S/ECMWF attribution bars
+logos/        official logo files used for figure attribution
+book/         JupyterBook configuration for the rendered site
+data/         local download cache (created at runtime, not committed)
+```
 
 ## Setup
 
 ```bash
-conda env create -f env/environment.yml
+conda env create -f environment.yml
 conda activate ecmwf-open-data-guide
 jupyter lab
 ```
+
+Notebooks 05-07 and 09 need a CDS/ADS API key: register at https://cds.climate.copernicus.eu and place your key in `~/.cdsapirc` as described there.
 
 ## Build the JupyterBook
 
