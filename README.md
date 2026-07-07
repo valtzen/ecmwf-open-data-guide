@@ -2,6 +2,8 @@
 
 Practical Jupyter notebooks for accessing and working with ECMWF forecast data and Copernicus climate services, with a focus on applications for Africa.
 
+> **Status (July 2026):** Written against the mid-2026 catalogue (IFS cycle 50r1, 0.25 degree grid). The Free and Open Data update to 0.1 degree resolution expected later in 2026 may require revisiting the open-data examples (notebooks 01-04).
+
 ## Notebooks
 
 Notebooks are ordered by access mechanism, from fully open (no credentials) to registered access, ending with an applied case study.
