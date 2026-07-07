@@ -32,7 +32,7 @@ from pathlib import Path
 
 ATTRIBUTION_TEXT = "© Copernicus / ECMWF 2026  |  CC BY 4.0"
 
-DEFAULT_LOGO_PATH = str(Path(__file__).parent / "logos" / "logoline_c3s.png")
+DEFAULT_LOGO_PATH = str(Path(__file__).parent.parent / "logos" / "logoline_c3s.png")
 
 BAR_HEIGHT_INCHES = 0.5
 BAR_COLOR         = "#FFFFFF"
