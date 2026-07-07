@@ -2,7 +2,7 @@
 
 Practical Jupyter notebooks for accessing and working with ECMWF forecast data and Copernicus climate services, with a focus on applications for Africa.
 
-> **Status (July 2026):** Written against the mid-2026 catalogue (IFS cycle 50r1, 0.25 degree grid). The Free and Open Data update to 0.1 degree resolution expected later in 2026 may require revisiting the open-data examples (notebooks 01-04).
+> **Status (July 2026):** Written against the mid-2026 catalogue (IFS cycle 50r1, 0.25 degree grid). The Free and Open Data update to 0.1 degree resolution expected later in 2026 may require revisiting the open-data examples (notebooks 01-04). All notebooks last fully verified July 2026.
 
 ## Notebooks
 
@@ -26,7 +26,6 @@ Notebooks are ordered by access mechanism, from fully open (no credentials) to r
 notebooks/    the guide (01-09) plus shared helpers (_utils.py, add_attribution.py)
 figures/      figures saved by the notebooks, with C3S/ECMWF attribution bars
 logos/        official logo files used for figure attribution
-book/         JupyterBook configuration for the rendered site
 data/         local download cache (created at runtime, not committed)
 ```
 
@@ -40,12 +39,20 @@ jupyter lab
 
 Notebooks 05-07 and 09 need a CDS/ADS API key: register at https://cds.climate.copernicus.eu and place your key in `~/.cdsapirc` as described there.
 
-## Build the JupyterBook
+## Credentials
 
-```bash
-jupyter-book build book
-# open book/_build/html/index.html
-```
+The notebooks are independent: any one can be run standalone. Notebook 02 reuses
+notebook 01's download when present, and fetches its own otherwise.
+
+- **Notebooks 01-04**: no credentials needed (ECMWF Open Data).
+- **Notebooks 05, 06, 09**: need a free CDS account. Register at
+  https://cds.climate.copernicus.eu and place your key in `~/.cdsapirc`.
+- **Notebook 07**: needs the **ADS** (Atmosphere Data Store), a different endpoint
+  from the CDS. Register at https://ads.atmosphere.copernicus.eu. The notebook
+  shows how to point the client at the ADS URL; a `.cdsapirc` configured only for
+  the CDS will not work for CAMS data.
+- **Notebook 08**: needs ECPDS access available to WMO Member NMHSs. It is
+  committed pre-executed, so it can be read without credentials.
 
 ## Support
 

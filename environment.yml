@@ -8,7 +8,7 @@ dependencies:
   - numpy
   - pandas
   - xarray
-  - scipy
+  - scipy       # required by xarray .interp() in notebook 09
   - matplotlib
   - cartopy
   - shapely
@@ -29,4 +29,3 @@ dependencies:
       - cdsapi                # direct CDS API client (also available via earthkit wrapper)
       - pystac-client
       - planetary-computer
-      - jupyter-book
