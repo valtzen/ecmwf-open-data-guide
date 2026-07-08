@@ -15,7 +15,6 @@ dependencies:
   - pyproj
   - eccodes=2.47.0
   - requests
-  - beautifulsoup4
   - metpy
   - pint
   - s3fs
