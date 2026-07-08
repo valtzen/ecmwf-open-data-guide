@@ -5,27 +5,29 @@ dependencies:
   - python=3.10
   - jupyterlab
   - ipywidgets
-  - numpy
+  - numpy=2.2.6
   - pandas
-  - xarray
+  - xarray=2025.6.1
   - scipy       # required by xarray .interp() in notebook 09
-  - matplotlib
-  - cartopy
+  - matplotlib=3.10.9
+  - cartopy=0.25.0
   - shapely
   - pyproj
-  - eccodes
+  - eccodes=2.47.0
   - requests
   - beautifulsoup4
   - metpy
   - pint
   - s3fs
   - gcsfs
-  - cfgrib
+  - cfgrib=0.9.15.1
   - pip
   - pip:
-      - ecmwf-opendata
-      - earthkit-data[cds]    # includes ecmwf-datastores-client for CDS access
-      - earthkit-plots
-      - cdsapi                # direct CDS API client (also available via earthkit wrapper)
+      # earthkit pinned below 1.0: earthkit-data 1.x (released July 2026)
+      # introduced breaking API changes; migration is a planned follow-up
+      - ecmwf-opendata==0.3.29
+      - earthkit-data[cds]==0.19.4    # includes ecmwf-datastores-client for CDS access
+      - earthkit-plots==0.6.1
+      - cdsapi==0.7.7                 # direct CDS API client (also available via earthkit wrapper)
       - pystac-client
       - planetary-computer
