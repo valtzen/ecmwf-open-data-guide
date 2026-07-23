@@ -17,7 +17,7 @@ Download the official C3S four-logo line from the Copernicus branding page:
 
 Save it as:  logos/logoline_c3s.png  (in your project root)
 
-If the logo file is not found the bar renders with text fallback — still valid attribution.
+If the logo file is not found the bar renders with text fallback: still valid attribution.
 
 For notebooks one level below the project root (e.g. notebooks/), add this before importing:
     import sys, pathlib
