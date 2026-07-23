@@ -1,20 +1,12 @@
-book/_build/
-_build/
-book/_build/
-_build/
+# Data cache (downloaded at runtime, never committed)
 data/
-book/_build/
-_build/
-notebooks/__pycache__/
-notebooks/.ipynb_checkpoints/
-.ipynb_checkpoints/
+
+# Python
+__pycache__/
 *.pyc
-.DS_Store
-data/
-book/_build/
-_build/
-notebooks/__pycache__/
-notebooks/.ipynb_checkpoints/
+
+# Jupyter
 .ipynb_checkpoints/
-*.pyc
+
+# macOS
 .DS_Store
